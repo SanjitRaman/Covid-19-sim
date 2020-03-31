@@ -24,6 +24,12 @@
 #di/dt = bsI/n-gI
 #dr/dt = gI
 
+t = 0
+n = 1000
+s = 1000
+i = 0
+r = 0
+
 def update(t):
     s += 2
 
@@ -32,11 +38,7 @@ def output():
     print("Infected: ")
     print("Recovered: ")
 
-t = 0
-n = 1000
-s = 1000
-i = 0
-r = 0
+
 
 
 while (True):
