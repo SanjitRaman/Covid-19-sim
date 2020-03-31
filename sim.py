@@ -2,6 +2,8 @@
 # Date: 31.03.2020
 # Version 1.0
 
+# to add an origin
+# git add origin https://github.com/SanjitRaman/Covid-19-sim.git
 
 # I pull the latest code using:
 # git pull --rebase
@@ -18,14 +20,20 @@
 
 #START OF PROGRAM
 
-def update():
+#ds/dt = -bSI/n
+#di/dt = bsI/n-gI
+dr/dt = gI
+
+def update(t):
     pass
 
-population = 1000
+time = 0
+n = 1000
 s = 1000
 i = 0
 r = 0
 
 
 while (True):
-    update()
+    update(time)
+    time +=1
