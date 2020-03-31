@@ -18,3 +18,9 @@
 
 #START OF PROGRAM
 print('Hello COVID 19!')
+x = input("What day is it")
+if x == "tuesday":
+    print("GG")
+else:
+    print("WRONG")
+
