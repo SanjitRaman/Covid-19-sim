@@ -41,5 +41,5 @@ r = 0
 
 while (True):
     update(t)
-    output(data) # print out some information
+    output() # print out some information
     t +=1
