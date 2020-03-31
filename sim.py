@@ -4,7 +4,7 @@
 
 
 # I pull the latest code using:
-# git pull https://github.com/SanjitRaman/Covid-19-sim.git
+# git pull --rebase
 # Then I can make changes on Visual Studio Code, as I please.
 
 # When I want to add them to the staging (preparation) area on my local computer:
