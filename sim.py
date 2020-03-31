@@ -22,12 +22,17 @@
 
 #ds/dt = -bSI/n
 #di/dt = bsI/n-gI
-dr/dt = gI
+#dr/dt = gI
 
 def update(t):
-    pass
+    s += 2
 
-time = 0
+def output():
+    print("Susceptible: ")
+    print("Infected: ")
+    print("Recovered: ")
+
+t = 0
 n = 1000
 s = 1000
 i = 0
@@ -35,5 +40,6 @@ r = 0
 
 
 while (True):
-    update(time)
-    time +=1
+    update(t)
+    output(data) # print out some information
+    t +=1
