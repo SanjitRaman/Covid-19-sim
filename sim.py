@@ -1,6 +1,6 @@
 # Covid-19 SIR Simulation
 # Date: 31.03.2020
-# Version 1.1
+# Version 1.2
 
 import datetime
 import math
