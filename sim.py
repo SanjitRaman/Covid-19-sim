@@ -1,47 +1,35 @@
 # Covid-19 SIR Simulation
 # Date: 31.03.2020
-# Version 1.0
+# Version 1.1
 
-# to add an origin
-# git add origin https://github.com/SanjitRaman/Covid-19-sim.git
+import math
+from matplotlib import pyplot as plt
+import numpy as np
 
-# I pull the latest code using:
-# git pull --rebase
-# Then I can make changes on Visual Studio Code, as I please.
+S = np.empty(1000)
+I = np.empty(1000)
+R = np.empty(1000)
 
-# When I want to add them to the staging (preparation) area on my local computer:
-# git add <filename> or git add . to add all changes.
+t=1
+S[0] = 1000
+I[0] = 10
+R[0] = 0
 
-# When I want to commit them to the timeline,
-# git commit -m "Enter a commit message"
+time_array = [i for i in range(1000)]
 
-# To upload the changes back to github:
-# git push -u origin master
+# run simulation
+while t < 1000:
+    s = -0.0005*S[t-1]*I[t-1]
+    i = 0.0005 * S[t-1] * I[t-1] - 1/14*I[t-1]
+    r = 1/14*I[t-1]
 
-#START OF PROGRAM
+    S[t] = S[t-1] + math.floor(s)
+    I[t] = I[t-1] + math.floor(i)
+    R[t] = R[t-1] + math.floor(r)    
+    t+=1
 
-#ds/dt = -bSI/n
-#di/dt = bsI/n-gI
-#dr/dt = gI
+plt.plot(time_array, I)
+plt.plot(time_array, S)
+plt.plot(time_array, R)
 
-t = 0
-n = 1000
-s = 1000
-i = 0
-r = 0
-
-def update(t):
-    s += 2
-
-def output():
-    print("Susceptible: ")
-    print("Infected: ")
-    print("Recovered: ")
-
-
-
-
-while (True):
-    update(t)
-    output() # print out some information
-    t +=1
+plt.show()
